@@ -13,9 +13,22 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+ 
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        gem update bundler
+        
     - run: bundle install
+    
+    - name: Install Dependencies
+
+    - name: Build Site
+      run: bundle exec jekyll build
 
     - name: Run HTML Proofer
-      run: |
-        bundle exec jekyll build
-        bundle exec htmlproofer --assume-extension ./_site
+      run: bundle exec htmlproofer --assume-extension ./_site
