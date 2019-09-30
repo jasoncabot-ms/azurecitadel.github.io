@@ -1,0 +1,21 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - run: bundle install
+
+    - name: Run HTML Proofer
+      run: |
+        bundle exec jekyll build
+        bundle exec htmlproofer --assume-extension ./_site
