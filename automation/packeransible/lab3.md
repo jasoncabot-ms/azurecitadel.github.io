@@ -12,7 +12,7 @@ header:
   overlay_image: images/header/whiteboard.jpg
   teaser: images/teaser/blueprint.png
 sidebar:
-  nav: "images"
+  nav: "packeransible"
 excerpt: Using dynamic inventories on Azure based on tags, resource groups and more
 ---
 

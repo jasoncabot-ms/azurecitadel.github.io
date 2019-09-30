@@ -12,7 +12,7 @@ header:
   overlay_image: images/header/whiteboard.jpg
   teaser: images/teaser/blueprint.png
 sidebar:
-  nav: "images"
+  nav: "packeransible"
 excerpt: Run ad hoc Ansible commands against static inventories
 ---
 

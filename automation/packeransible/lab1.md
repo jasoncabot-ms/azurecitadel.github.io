@@ -12,7 +12,7 @@ header:
   overlay_image: images/header/whiteboard.jpg
   teaser: images/teaser/blueprint.png
 sidebar:
-  nav: "images"
+  nav: "packeransible"
 excerpt: Generate a simple Ubuntu image and then deploy VMs from it
 ---
 
@@ -28,7 +28,7 @@ If you do no have Packer installed then you can either [install Packer manually]
 
 If installing Packer manually
 
-1. Follow Hashicorp's instructions for installing the binary if you haven't done so as part of the [prereqs](../prereqs):
+1. Follow Hashicorp's instructions for installing the binary if you haven't done so as part of the [prereqs](../../prereqs):
 
     <https://www.packer.io/intro/getting-started/install.html#precompiled-binaries>
 

@@ -12,7 +12,7 @@ header:
   overlay_image: images/header/whiteboard.jpg
   teaser: images/teaser/blueprint.png
 sidebar:
-  nav: "linux"
+  nav: "packeransible"
 excerpt: Collection of labs using Packer and Ansible to automate VM image creation and manage VMs
 ---
 
@@ -28,7 +28,7 @@ The aim of these labs is to bring together some of these technologies together i
 
 ## Pre-requisites
 
-Please set up your laptop as per the [automation prereqs](./prereqs) page.
+Please set up your laptop as per the [automation prereqs](../prereqs) page.
 
 Not everything is needed for the image labs, but chances are that you'll dig into the other content as well!
 
