@@ -1,0 +1,32 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+ 
+    - name: Install dependencies
+      run: |
+        gem install bundler -N
+        gem update bundler
+        
+    - run: bundle install
+    
+    - name: Build Site
+      run: bundle exec jekyll build
+
+    - name: Run HTML Proofer
+      run: bundle exec htmlproofer --assume-extension --checks-to-ignore ImageCheck,ScriptCheck --only-4xx --url-ignore "http://127,http://localhost,/specalised,/\/tags\/#.*/,#"
