@@ -28,9 +28,6 @@ jobs:
     - name: Build Site
       run: bundle exec jekyll build
 
-    - name: Run HTML Proofer
-      run: bundle exec htmlproofer --assume-extension --only-4xx --url-ignore "http://127,http://localhost,/specalised,/\/tags\/#.*/,#" ./_site
-
     - name: Upload to staging
       run: |
         PULL_REQUEST_ID=$(jq --raw-output .pull_request.number "${GITHUB_EVENT_PATH}")
@@ -38,3 +35,7 @@ jobs:
       env:
         STORAGE_ACCOUNT_KEY: ${{ secrets.STORAGE_ACCOUNT_KEY }}
         STORAGE_ACCOUNT_NAME: ${{ secrets.STORAGE_ACCOUNT_NAME }}
+
+    - name: Run HTML Proofer
+      run: bundle exec htmlproofer --assume-extension --only-4xx --url-ignore "http://127,http://localhost,/specalised,/\/tags\/#.*/,#" ./_site
+
