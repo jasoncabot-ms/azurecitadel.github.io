@@ -29,7 +29,7 @@ jobs:
       run: bundle exec jekyll build
 
     - name: Run HTML Proofer
-      run: bundle exec htmlproofer --assume-extension --checks-to-ignore ImageCheck,ScriptCheck --only-4xx --url-ignore "http://127,http://localhost,/specalised,/\/tags\/#.*/,#"
+      run: bundle exec htmlproofer --assume-extension --only-4xx --url-ignore "http://127,http://localhost,/specalised,/\/tags\/#.*/,#" ./_site
 
     - name: Upload to staging
       run: |
